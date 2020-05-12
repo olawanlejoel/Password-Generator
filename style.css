@@ -1,17 +1,20 @@
 body {
 	margin: 0;
-	text-align: center;
+	
 	background-color: #074da2;
 	font-family: sans-serif;
 }
 
 .head {
 	background-color: white;
+	text-align: center;
 	border-bottom-right-radius: 50px;
 }
 
+
 .answer {
 	margin-left: 70px;
+	text-align: center;
 	background-color: white;
 	width:200px;
 	height: 30px;
@@ -19,9 +22,14 @@ body {
 	text-align: center;
 }
 
-.checks {
-	text-align: right;
-	margin-right: 70px;
+.val {
+	float: right;
+	margin: 0;
+}
+
+.label {
+	float: left;
+	padding-left: 7px;
 }
 
 .btn {
@@ -36,6 +44,7 @@ body {
 
 .footer {
 	background-color: #372323;
+	text-align: center;
 	border-top-left-radius: 50px;
 	color: white;
 }

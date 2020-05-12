@@ -16,15 +16,19 @@
 			<p id="answer" class="answer"></p><br>
 			<!-- <button id="copy" class="btn">copy</button><br>	<br> -->	
 
-			Length :<input type="number" name="" value="20" id="length"><br><br>
+			<center>
+				<label>Length :</label>
+				<input type="number" maxlength="100" value="20" id="length">
+			</center>
+			<br><br>
 			<div class="checks">
-				Enable UpperCase Alphabets:<input type="checkbox" name="" id="upper" checked ><br>
-				Enable LowerCase Alphabets<input type="checkbox" name="" id="lower" checked ><br>
-				Enable Numbers<input type="checkbox" name="" id="number" checked ><br>
-				Enable Symbols<input type="checkbox" name="" id="symbol" checked ><br><br>	
+				<label  class="label">Enable UpperCase Alphabets :</label><input type="checkbox" id="upper" checked class="val"><br>
+				<label  class="label">Enable LowerCase Alphabets :</label><input type="checkbox" id="lower" checked class="val"><br>
+				<label  class="label">Enable Numbers :</label><input type="checkbox" id="number" checked class="val"><br>
+				<label  class="label">Enable Symbols :</label><input type="checkbox" id="symbol" checked class="val"><br><br>	
 			</div>
 
-			<button id="generate" class="btn">Generate</button>
+			<center><button id="generate" class="btn">Generate</button></center>
 		</div>
 		<br><br>
 		<footer class="footer">
