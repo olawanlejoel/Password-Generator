@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+	text-align: center;
+	background-color: #074da2;
+	font-family: sans-serif;
+}
+
+.head {
+	background-color: white;
+	border-bottom-right-radius: 50px;
+}
+
+.answer {
+	margin-left: 70px;
+	background-color: white;
+	width:200px;
+	height: 30px;
+	color: black;
+	text-align: center;
+}
+
+.checks {
+	text-align: right;
+	margin-right: 70px;
+}
+
+.btn {
+	background-color: #578dcf;
+	width:80px;
+	height: 30px;
+}
+
+.container {
+	color: white;
+}
+
+.footer {
+	background-color: #372323;
+	border-top-left-radius: 50px;
+	color: white;
+}
