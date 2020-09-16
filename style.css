@@ -13,7 +13,7 @@ body {
 .container {
     width: min(100%, 400px);
     margin: auto;
-    height: 100vh;
+    max-height: 100vh;
     position: relative;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .top-container svg {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
 }
 
