@@ -1,50 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-	margin: 0;
-	
-	background-color: #074da2;
-	font-family: sans-serif;
-}
-
-.head {
-	background-color: white;
-	text-align: center;
-	border-bottom-right-radius: 50px;
-}
-
-
-.answer {
-	margin-left: 70px;
-	text-align: center;
-	background-color: white;
-	width:200px;
-	height: 30px;
-	color: black;
-	text-align: center;
-}
-
-.val {
-	float: right;
-	margin: 0;
-}
-
-.label {
-	float: left;
-	padding-left: 7px;
-}
-
-.btn {
-	background-color: #578dcf;
-	width:80px;
-	height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #937CF2;
+    height: 100vh;
 }
 
 .container {
-	color: white;
+    width: min(100%, 400px);
+    margin: auto;
+    height: 100vh;
+    position: relative;
 }
 
-.footer {
-	background-color: #372323;
-	text-align: center;
-	border-top-left-radius: 50px;
-	color: white;
+.top-container {
+    height: 550px;
+    background-color: #250A95;
+    color: #fff;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-container svg {
+    margin-bottom: 100px;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.top-container h1 {
+    font-size: 60px;
+}
+
+.top-container p {
+    font-size: 10px;
+}
+
+.bottom-btn {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+}
+
+.btn {
+    background-color: #250A95;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 30px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.question-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.question-modal {
+    height: 400px;
+    width: min(90%, 350px);
+    background-color: #250A95;
+    color: #fff;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 10px 0 25px;
+    position: relative;
+}
+
+h4::after {
+    position: absolute;
+    content: "";
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.length-field label {
+    font-size: 12px;
+}
+
+.length-field input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px 0 40px;
+}
+
+.length-field input:focus {
+    outline: none;
+}
+
+.checks {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.checks .label {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.checks .val {
+    position: absolute;
+    opacity: 1;
+    cursor: pointer;
+    right: 0;
+}
+
+
+/* .checks .custom-checkbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}
+
+.checks .custom-checkbox::after {
+    position: absolute;
+    content: "";
+    left: 12px;
+    top: 12px;
+    height: 0px;
+    width: 0px;
+    border-radius: 5px;
+    border: solid #009Bff;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(0deg) scale(0);
+    -ms-transform: rotate(0deg) scale(0);
+    transform: rotate(0deg) scale(0);
+    opacity: 1;
+}
+
+.checks input:checked~.custom-checkbox {
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    border: 2px solid #fff;
+}
+
+.checks input:checked~.custom-checkbox::after {
+    content: "";
+    -webkit-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+    left: 8px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid #009Bff;
+    border-width: 0 2px 2px 0;
+    background-color: transparent;
+    border-radius: 0;
+} */
+
+.submit-btn .btn {
+    display: block;
+    background-color: #fff;
+    color: #250A95;
+    text-align: center;
+    padding: 10px 30px;
+}
+
+.answer-modal {
+    height: 230px;
+    width: min(90%, 350px);
+    background-color: #250A95;
+    color: #fff;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: -1500px;
+}
+
+.answer-modal h4 {
+    margin-bottom: 40px;
+}
+
+.answer-modal .answer-field {
+    width: 100%;
+    height: 50px;
+    color: #250A95;
+    background-color: #fff;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.answer-modal .answer-field:focus {
+    outline: none;
+}
+
+.copy-btn {
+    position: relative;
+}
+
+.copy-btn .btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    background-color: #fff;
+    color: #250A95;
+    text-align: center;
+    padding: 7px 30px;
+    margin-top: 25px;
+}
+
+.home-btn {
+    position: relative;
+}
+
+.home-btn svg {
+    position: absolute;
+    bottom: calc(100vh + 10px);
+    left: 50%;
+    transform: translate(-50%);
+    color: #fff;
+    cursor: pointer;
+}
+
+.home-btn svg circle:hover {
+    fill: #fff;
+}
+
+.home-btn svg g path:hover {
+    stroke: #250a95;
 }

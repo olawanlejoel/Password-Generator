@@ -1,41 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Password Generator</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-		<section>
-			<div class="head">
-				<img src="images/security.jpg">
-			</div>
-		</section>
-		<div class="container">
-			<br>
-			<p id="answer" class="answer"></p><br>
-			<!-- <button id="copy" class="btn">copy</button><br>	<br> -->	
 
-			<center>
-				<label>Length :</label>
-				<input type="number" maxlength="100" value="20" id="length">
-			</center>
-			<br><br>
-			<div class="checks">
-				<label  class="label">Enable UpperCase Alphabets :</label><input type="checkbox" id="upper" checked class="val"><br>
-				<label  class="label">Enable LowerCase Alphabets :</label><input type="checkbox" id="lower" checked class="val"><br>
-				<label  class="label">Enable Numbers :</label><input type="checkbox" id="number" checked class="val"><br>
-				<label  class="label">Enable Symbols :</label><input type="checkbox" id="symbol" checked class="val"><br><br>	
-			</div>
+    <div class="container">
+        <div class="top-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="93.576" height="92.372" viewBox="0 0 93.576 92.372">
+                <g id="iconfinder_protection__security__safety__shield_2537363" transform="translate(-2.003 -2.312)">
+                  <g id="Group_8" data-name="Group 8" transform="translate(2.003 2.312)">
+                    <path id="Path_4" data-name="Path 4" d="M46.837,46.476V2.312C41.6,4.639,19.153,14.2,5.03,14.2c-.331,0-.682,0-1.014-.02l-1.969-.078-.039,1.969A114.991,114.991,0,0,0,6.4,46.476Z" transform="translate(-2.003 -2.312)" fill="#fff"/>
+                  </g>
+                  <g id="Group_9" data-name="Group 9" transform="translate(50.737 2.318)">
+                    <path id="Path_5" data-name="Path 5" d="M27,46.473H67.261a115.282,115.282,0,0,0,4.577-30.382L71.8,14.1l-1.969.078C55.761,14.716,32.369,4.712,27,2.315Z" transform="translate(-26.998 -2.315)" fill="#3a92cc"/>
+                  </g>
+                  <g id="Group_10" data-name="Group 10" transform="translate(7.602 50.376)">
+                    <path id="Path_6" data-name="Path 6" d="M44.11,26.963H4.875c5.6,17.144,16.83,35.953,39.235,44.308V26.963Z" transform="translate(-4.875 -26.963)" fill="#3a92cc"/>
+                  </g>
+                  <g id="Group_11" data-name="Group 11" transform="translate(50.737 50.376)">
+                    <path id="Path_7" data-name="Path 7" d="M27,26.963V71.115C49.143,62.684,60.37,44,66.039,26.963Z" transform="translate(-26.998 -26.963)" fill="#fff"/>
+                  </g>
+                </g>
+              </svg>
 
-			<center><button id="generate" class="btn">Generate</button></center>
-		</div>
-		<br><br>
-		<footer class="footer">
-			<br><br>
-			<p>Built with <span style="color: red;">&hearts;</span> by <a href="https://twitter.com/olawanle_joel">Olawanle Joel</a></p>
-			<br><br>
-		</footer>
-		<script src="script.js"></script>
+            <h1>Welcome!</h1>
+            <p>Please click on the generate button to generate your password.</p>
+        </div>
+
+        <div class="bottom-btn">
+            <a href="#" class="btn">Generate</a>
+        </div>
+
+        <div class="question-container">
+            <div class="question-modal">
+                <h4>Please check the boxes you want!</h4>
+                <div class="length-field">
+                    <label>Length :</label>
+                    <input type="number" maxlength="100" value="20" id="length">
+                </div>
+                <div class="checks">
+                    <label class="label">Enable UpperCase Alphabets :</label>
+                    <input type="checkbox" id="upper" checked class="val"><br>
+                    <span class="custom-checkbox"></span>
+                </div>
+                <div class="checks">
+                    <label class="label">Enable LowerCase Alphabets :</label>
+                    <input type="checkbox" id="lower" checked class="val"><br>
+                    <span class="custom-checkbox"></span>
+                </div>
+                <div class="checks">
+                    <label class="label">Enable Numbers :</label>
+                    <input type="checkbox" id="number" checked class="val"><br>
+                    <span class="custom-checkbox"></span>
+                </div>
+                <div class="checks">
+                    <label class="label">Enable Symbols :</label>
+                    <input type="checkbox" id="symbol" checked class="val"><br><br>
+                    <span class="custom-checkbox"></span>
+                </div>
+
+                <div class="submit-btn">
+                    <a href="#" class="btn" id="generate">Generate</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="question-container">
+            <div class="answer-modal">
+                <h4>Here is your generated password</h4>
+                <input type="text" class="answer-field" id="myInput">
+                <div class="copy-btn ">
+                    <a href="# " class="btn " onclick="myFunction() ">Copy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-btn ">
+            <svg xmlns="http://www.w3.org/2000/svg " width="64 " height="64 " viewBox="0 0 64 64 ">
+                <g id="Group_12 " data-name="Group 12 " transform="translate(-156 -720) ">
+                  <circle id="Ellipse_4 " data-name="Ellipse 4 " cx="32 " cy="32 " r="32 " transform="translate(156 720) " fill="#250a95 "/>
+                  <g id="iconfinder_User_Interface-45_2044243 " transform="translate(21.5 585.9) ">
+                    <path id="Path_8 " data-name="Path 8 " d="M166.941,151.1,151.5,166.541h5.319V182.1h7.122V171.712h6V182.1h7.122V166.541h5.319Z " fill="none " stroke="#fff " stroke-linecap="round " stroke-linejoin="round " stroke-miterlimit="10
+                    " stroke-width="3 "/>
+                  </g>
+                </g>
+              </svg>
+
+        </div>
+
+    </div>
+
+    <script src="./app.js "></script>
 </body>
+
 </html>
