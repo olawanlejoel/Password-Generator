@@ -14,11 +14,12 @@ body {
     width: min(100%, 400px);
     margin: auto;
     max-height: 100vh;
+    overflow:hidden;
     position: relative;
 }
 
 .top-container {
-    height: 300px;
+    height: 500px;
     background-color: #250A95;
     color: #fff;
     border-bottom-left-radius: 40px;
@@ -32,7 +33,7 @@ body {
 }
 
 .top-container svg {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -46,7 +47,7 @@ body {
 
 .bottom-btn {
     position: absolute;
-    bottom: 30px;
+    bottom: 50px;
     right: 10px;
 }
 
